@@ -1,3 +1,4 @@
+import { ContactPage } from './../contact/contact';
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
 
@@ -6,9 +7,20 @@ import { NavController } from 'ionic-angular';
   templateUrl: 'about.html'
 })
 export class AboutPage {
-
-  constructor(public navCtrl: NavController) {
-
+display: number;
+name: string;
+  constructor(public navCtrl: NavController,public Nav: NavController) {
+    
   }
+  nextPage(){
+    this.Nav.push(ContactPage);
+   }
+onClick(){
+this.display=1;
+}
+seClick() {
+  this.display = 0;
+  this.name = "";
+}
 
 }

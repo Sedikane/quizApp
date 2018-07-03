@@ -1,3 +1,18 @@
 page-home {
+    ion-content{
+    background-image: url("../../assets/imgs/screenshot_1.png");
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+    button{
+        text-align: center;
+        top: 50%;
+        left: 30%;
+    }
+}
+ion-title{
+    text-align: center;
+}
 }
