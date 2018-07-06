@@ -14,12 +14,14 @@
           </ion-input>
         </ion-item>
       </ion-list>
+      <ion-scroll scrollX="true" style="height: 50px;" ></ion-scroll>
     <ion-list>
         <ion-list>
           <ion-label>1. What is teenage pregnancy?</ion-label>
+          
             <ion-item>
               <ion-select [(ngModel)]="demoSelectBox1">
-                <ion-option value="A">Option A: pregnacy in females under the age of 20. </ion-option>
+                <ion-option (ionSelect)="answerr()" value="A">Option A: pregnacy in females under the age of 20</ion-option>
                 <ion-option value="B">Option B: Pregnacy in females above the age of 20</ion-option>
                 <ion-option value="C">Option C: both A and B</ion-option>
                 <ion-option value="D">Option D: I have no idea</ion-option>
@@ -27,11 +29,12 @@
             </ion-item>
           </ion-list>
           <ion-list>
+            
               <ion-label>2. What causes teenage pregnancy?</ion-label>
               <ion-item>
                 <ion-select [(ngModel)]="demoSelectBox2">
                   <ion-option value="A">Option A: Poverty</ion-option>
-                  <ion-option value="B">Option B: Peer pressure</ion-option>
+                  <ion-option (ionSelect)="answerr()" value="B">Option B: Peer pressure </ion-option>
                   <ion-option value="C">Option C: Lack of education</ion-option>
                   <ion-option value="D">Option D: both A and B</ion-option>
                 </ion-select>
@@ -43,7 +46,7 @@
                   <ion-select [(ngModel)]="demoSelectBox3">
                     <ion-option value="A">Option A: Rash behavior</ion-option>
                     <ion-option value="B">Option B: Suffer an emotional crisis</ion-option>
-                    <ion-option value="C">Option C: both A and B</ion-option>
+                    <ion-option (ionSelect)="answerr()" value="C">Option C: both A and B   </ion-option>
                     <ion-option value="D">Option D: I have no idea.</ion-option>
                   </ion-select>
                 </ion-item>
@@ -56,7 +59,7 @@
                       <ion-option value="A">Option A: They don't cope.</ion-option>
                       <ion-option value="B">Option B: There is alot of stress</ion-option>
                       <ion-option value="C">Option C: I have no idea.</ion-option>
-                      <ion-option value="D">Option D: By getting enough support from elders</ion-option>
+                      <ion-option (ionSelect)="answerr()" value="D">Option D: By getting enough support from elders</ion-option>
                     </ion-select>
                   </ion-item>
                 </ion-list>
@@ -67,7 +70,7 @@
                       <ion-select [(ngModel)]="demoSelectBox5">
                         <ion-option value="A">Option A: By educating young girls</ion-option>
                         <ion-option value="B">Option B: By encouraging young girls to use contraceptives</ion-option>
-                        <ion-option value="C">Option C: Both A and B</ion-option>
+                        <ion-option (ionSelect)="answerr()" value="C">Option C: Both A and B</ion-option>
                         <ion-option value="D">Option D: I have no idea.</ion-option>
                       </ion-select>
                     </ion-item>
@@ -75,12 +78,13 @@
     </ion-list>
  
   <div *ngIf="display==1">
-    <p>Name: {{name}} your answers are as follows.</p>
+    <p> {{name}} your answers are as follows.</p>
     <p>1: {{demoSelectBox1}}</p>
     <p>2: {{demoSelectBox2}}</p>
     <p>3: {{demoSelectBox3}}</p>
     <p>4: {{demoSelectBox4}}</p>
     <p>5: {{demoSelectBox5}}</p>
+    <p>{{name}} your total score is = {{total}}/5</p>
   </div>
 
   <div class="dis">
@@ -88,4 +92,5 @@
     <button ion-button block (click)="seClick()">Clear</button><br>
   </div>
   <button ion-button block (click)="nextPage()">Next page</button>
+
 </ion-content>

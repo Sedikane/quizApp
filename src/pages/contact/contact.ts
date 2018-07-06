@@ -14,4 +14,5 @@ export class ContactPage {
 homePage(){
   this.Nav.push(HomePage);
 }
+
 }

@@ -1,19 +1,25 @@
 page-about {
     ion-content{
-        background-image: url("../../assets/imgs/screenshot_1.png");
+        background-image: url("../../assets/imgs/stock-.jpg");
         background-size: contain;
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         p{
             font-size: 18px;
+            color: darkblue;
         }
         ion-label{
             font-size: 18px;
-           
+           color: blue;
         }
     }
     ion-title{
         text-align: center;
     }
+    button{
+        text-align: center;
+        width: 50%;
+    }
+   
 }

@@ -14,4 +14,5 @@ export class HomePage {
  nextPage(){
    this.Nav.push(AboutPage);
   }
+  
 }
