@@ -1,6 +1,7 @@
-import { ContactPage } from './../contact/contact';
+
 import { Component } from '@angular/core';
 import { NavController } from 'ionic-angular';
+import { ContactPage } from '../contact/contact';
 
 @Component({
   selector: 'page-about',
@@ -9,7 +10,6 @@ import { NavController } from 'ionic-angular';
 export class AboutPage {
 display: number;
 name: string;
-option: string;
 total:number;
 
   constructor(public navCtrl: NavController,public Nav: NavController) {

@@ -7,14 +7,13 @@
 </ion-header>
 
 <ion-content padding>
-    <p><span>Instruction please enter your name and answer the following questions by selecting the correct answers</span>.</p>
+    <p><span>### Category 1 Instruction please enter your name and answer the following questions by selecting the correct answers</span>.</p>
     <ion-list>
         <ion-item>
           <ion-input  placeholder="Name" type="text" name="name" [(ngModel)]="name" required>
           </ion-input>
         </ion-item>
       </ion-list>
-      <ion-scroll scrollX="true" style="height: 50px;" ></ion-scroll>
     <ion-list>
         <ion-list>
           <ion-label>1. What is teenage pregnancy?</ion-label>
@@ -78,15 +77,135 @@
     </ion-list>
  
   <div *ngIf="display==1">
-    <p> {{name}} your answers are as follows.</p>
+    <p> {{name}} your answers for category 1 are as follows.</p>
     <p>1: {{demoSelectBox1}}</p>
     <p>2: {{demoSelectBox2}}</p>
     <p>3: {{demoSelectBox3}}</p>
     <p>4: {{demoSelectBox4}}</p>
     <p>5: {{demoSelectBox5}}</p>
-    <p>{{name}} your total score is = {{total}}/5</p>
   </div>
+  <p><span> ###Category 2 Instruction please answer the following questions by selecting the correct answers</span>.</p>
+  <ion-list>
+      <ion-list>
+        <ion-label>1. True or false? In computing, keyboards are used as input devices.</ion-label>
+        
+          <ion-item>
+            <ion-select [(ngModel)]="demoSelectBox6">
+              <ion-option (ionSelect)="answerr()" value="True">True</ion-option>
+              <ion-option value="False">False</ion-option>
+            </ion-select>
+          </ion-item>
+        </ion-list>
+<ion-list>   
+  <ion-label>2. True or false? Gold is not a good conductor of electricity?</ion-label>
+  <ion-item>
+    <ion-select [(ngModel)]="demoSelectBox7">
+      <ion-option value="True">True</ion-option>
+      <ion-option (ionSelect)="answerr()" value="false">False</ion-option>
+    </ion-select>
+  </ion-item>
+</ion-list>
+<ion-list>
+    <ion-label>3. True or false? Nintendo was founded after the year 1900.</ion-label>
+    <ion-item>
+      <ion-select [(ngModel)]="demoSelectBox8">
+        <ion-option value="True">True</ion-option>
+        <ion-option (ionSelect)="answerr()" value="False">False</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
 
+  <ion-list>
+      <ion-label>4. Abbreviation WWW stand for World Wild Web</ion-label>
+      <ion-item>
+        <ion-select [(ngModel)]="demoSelectBox9">
+          <ion-option (ionSelect)="answerr()" value="True">True</ion-option>
+          <ion-option  value="False">False</ion-option>
+        </ion-select>
+      </ion-item>
+    </ion-list>
+
+    <ion-list>
+        <ion-label>5. True or false? DNA is an abbreviation for ‘Deoxyribonucleic acid</ion-label>
+        <ion-item>
+          <ion-select [(ngModel)]="demoSelectBox10">
+            <ion-option value="True">True</ion-option>
+            <ion-option (ionSelect)="answerr()" value="false">false</ion-option>
+          </ion-select>
+        </ion-item>
+    </ion-list>
+</ion-list>
+
+<div *ngIf="display==1">
+<p> {{name}} your answers for category 2 are as follows.</p>
+<p>1: {{demoSelectBox6}}</p>
+<p>2: {{demoSelectBox7}}</p>
+<p>3: {{demoSelectBox8}}</p>
+<p>4: {{demoSelectBox9}}</p>
+<p>5: {{demoSelectBox10}}</p>
+</div>
+<p><span>### Category 3 Instruction please  answer the following questions by selecting the correct answers</span>.</p>
+    <ion-list>
+        <ion-list>
+          <ion-label>1.Yes/No, Mandela born in America?</ion-label>
+          
+            <ion-item>
+              <ion-select [(ngModel)]="demoSelectBox11">
+                <ion-option  value="Yes">Yes</ion-option>
+                <ion-option (ionSelect)="answerr()" value="No">No</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+          <ion-list>
+            
+              <ion-label>2. Yes/No, Madela was the first black president?</ion-label>
+              <ion-item>
+                <ion-select [(ngModel)]="demoSelectBox12">
+                    <ion-option (ionSelect)="answerr()" value="Yes">Yes</ion-option>
+                    <ion-option value="No">No</ion-option>
+                </ion-select>
+              </ion-item>
+            </ion-list>
+            <ion-list>
+                <ion-label>3. Yes/No Mandela was born in 1930</ion-label>
+                <ion-item>
+                  <ion-select [(ngModel)]="demoSelectBox13">
+                      <ion-option  value="Yes">Yes</ion-option>
+                      <ion-option (ionSelect)="answerr()" value="No">No</ion-option>
+                  </ion-select>
+                </ion-item>
+              </ion-list>
+     
+              <ion-list>
+                  <ion-label>4. Yes/No, he jailed in Robben Island</ion-label>
+                  <ion-item>
+                    <ion-select [(ngModel)]="demoSelectBox14">
+                        <ion-option (ionSelect)="answerr()" value="Yes">Yes</ion-option>
+                        <ion-option value="No">No</ion-option>
+                    </ion-select>
+                  </ion-item>
+                </ion-list>
+       
+                <ion-list>
+                    <ion-label>5. Yes/No,  Nelson Mandela was awarded the Nobel Peace Prize in 1992</ion-label>
+                    <ion-item>
+                      <ion-select [(ngModel)]="demoSelectBox15">
+                          <ion-option  value="Yes">Yes</ion-option>
+                          <ion-option (ionSelect)="answerr()" value="No">No</ion-option>
+                      </ion-select>
+                    </ion-item>
+                </ion-list>
+    </ion-list>
+ 
+  <div *ngIf="display==1">
+    <p> your answers for category 3 are as follows.</p>
+    <p>1: {{demoSelectBox11}}</p>
+    <p>2: {{demoSelectBox12}}</p>
+    <p>3: {{demoSelectBox13}}</p>
+    <p>4: {{demoSelectBox14}}</p>
+    <p>5: {{demoSelectBox15}}</p>
+    <p>{{name}} your total score is = {{total}}/15</p>
+  </div>
   <div class="dis">
     <button ion-button block (click)="onClick()">Display</button><br>
     <button ion-button block (click)="seClick()">Clear</button><br>
